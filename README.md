@@ -1,3 +1,7 @@
+![CI](https://github.com/Strassee/ahj-rxjs-polling-backend/actions/workflows/web.yml/badge.svg)
+
+[On github Pages](https://strassee.github.io/ahj-rxjs-polling-backend/)
+
 # Домашнее задание к занятию "11. RxJS"
 
 Правила сдачи задания:
