@@ -9,8 +9,7 @@ class UnreadMessages {
     this.messages = [];
     const countMessages = this.randomInteger(1, 3);
     for(let i = 0; i < countMessages; i++) {
-      const mess = new Message();
-      this.messages.push(mess.getMessage());
+      this.messages.push(new Message());
     }
     this.messages.sort((a, b) => a.received > b.received ? 1 : -1)
     return this.messages;

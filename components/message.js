@@ -1,24 +1,32 @@
 const { faker } = require('@faker-js/faker');
 
 class Message {
-  constructor() {
-    this.id = faker.string.uuid();
-    this.from = faker.internet.email();
-    this.subject = faker.lorem.lines(1);
-    this.body = faker.lorem.lines(2);
-    // this.received = Date.parse(faker.date.between({ from: Date.now() - 10000000, to: Date.now() }));
-    this.received = Date.now();
+  constructor(
+    id = faker.string.uuid(),
+    from = faker.internet.email(),
+    subject = faker.lorem.lines(1),
+    body = faker.lorem.lines(2),
+    received = Date.now()
+    // received = Date.parse(faker.date.between({ from: Date.now() - 10000000, to: Date.now() }))
+  ) {
+    this.id = id;
+    this.from = from;
+    this.subject = subject;
+    this.body = body;
+    this.received = received;
   };
 
-  getMessage() {
-    return {
-      "id": this.id,
-      "from": this.from,
-      "subject": this.subject,
-      "body": this.body,
-      "received": this.received
-    }
-  }
+//   getMessage() {
+//     const {id, from, subject, body, received } = this;
+//     return {
+//       id,
+//       from,
+//       subject,
+//       body,
+//       received
+//     }
+//   }
+
 }
 
 module.exports = { Message };
